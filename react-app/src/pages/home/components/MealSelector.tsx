@@ -46,7 +46,7 @@ const mealItems: { icon: IconName; type: MealType }[] = [
     type: 'Dinner',
   },
   {
-    icon: 'knife',
+    icon: 'cup',
     type: 'Snack',
   },
 ]

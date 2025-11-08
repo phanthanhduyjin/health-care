@@ -148,11 +148,9 @@ pnpm dev:server
 ## 📜 Available Scripts
 
 ### Root Level
-- `pnpm dev` - Run both frontend and backend concurrently
+
 - `pnpm dev:react` - Run React app only
 - `pnpm dev:server` - Run JSON Server only
-- `pnpm format` - Format code with Prettier
-- `pnpm format:check` - Check code formatting
 
 ### React App (`react-app/`)
 - `pnpm dev` - Start Vite development server

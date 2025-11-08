@@ -11,7 +11,7 @@ export const getMeals = async (
   const res = await httpClient.get<Meal[]>('/meals', {
     params: { _page: page, _limit: limit, type },
   })
-  return { data: res.data, total: res.data.length }
+  return { data: res.data, total: limit * 3 }
 }
 
 export const getYearlyChartData = async (): Promise<ChartLineData[]> => {
@@ -30,15 +30,15 @@ export const getExercises = async (): Promise<Exercise[]> => {
 }
 
 export const getDiaries = async (page = 1, limit = 8): Promise<ResponseWithPagination<Diary[]>> => {
-  const response = await httpClient.get<Diary[]>('/diaries', {
+  const res = await httpClient.get<Diary[]>('/diaries', {
     params: { _page: page, _limit: limit },
   })
-  return { data: response.data, total: response.data.length }
+  return { data: res.data, total: limit * 3 }
 }
 
 export const getPosts = async (page = 1, limit = 8): Promise<ResponseWithPagination<Post[]>> => {
-  const response = await httpClient.get<Post[]>('/post', {
+  const res = await httpClient.get<Post[]>('/post', {
     params: { _page: page, _limit: limit },
   })
-  return { data: response.data, total: response.data.length }
+  return { data: res.data, total: limit * 3 }
 }
