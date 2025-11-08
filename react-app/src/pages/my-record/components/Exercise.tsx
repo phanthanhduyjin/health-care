@@ -1,5 +1,3 @@
-import type { FC } from 'react'
-
 import { RecordCard } from '@/pages/my-record/components/RecordCard'
 import { useExerciseData } from '@/pages/my-record/hooks/useExerciseData'
 import { useGetExercises } from '@/pages/my-record/hooks/useGetExercises'
@@ -40,11 +38,11 @@ export const Exercise = () => {
   )
 }
 
-interface ExerciseItemProps {
+type ExerciseItemProps = {
   exercise: IExercise
 }
 
-const ExerciseItem: FC<ExerciseItemProps> = ({ exercise }) => (
+const ExerciseItem = ({ exercise }: ExerciseItemProps) => (
   <li className='flex justify-between before:mr-[3px] before:self-start before:text-[5px] before:leading-[17px] before:text-white before:content-["●"]'>
     <div className='flex flex-1 flex-col text-[15px] tracking-[0.08px]'>
       <span className='leading-[22px] font-light text-white'>{exercise.name}</span>

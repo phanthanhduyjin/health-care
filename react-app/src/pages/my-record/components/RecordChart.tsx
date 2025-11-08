@@ -1,6 +1,5 @@
 import clsx from 'clsx'
 import dayjs from 'dayjs'
-import type { FC } from 'react'
 import { useMemo, useState } from 'react'
 import { CartesianGrid, Line, LineChart, ResponsiveContainer, XAxis } from 'recharts'
 
@@ -12,7 +11,7 @@ type DateType = 'd' | 'w' | 'm' | 'y'
 type FilterItem = { title: string; value: DateType }
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-const CustomTick: FC = ({ x, y, payload }: any) => {
+const CustomTick = ({ x, y, payload }: any) => {
   const text = payload.value
 
   const number = text.match(/\d+/)?.[0]
@@ -39,7 +38,7 @@ const CustomTick: FC = ({ x, y, payload }: any) => {
     </g>
   )
 }
-export const RecordChart: FC = () => {
+export const RecordChart = () => {
   const [dateType, setDateTypeSelected] = useState<DateType>('y')
   const { data: reportData } = useGetBodyReport()
   const data = useMemo(() => reportData?.[dateType] ?? [], [dateType, reportData])
@@ -123,10 +122,9 @@ const filterTypes: FilterItem[] = [
     title: '年',
   },
 ]
-const FilterChart: FC<{ dateType: DateType; onChange: (f: DateType) => void }> = ({
-  dateType,
-  onChange,
-}) => (
+
+type FilterChartProps = { dateType: DateType; onChange: (f: DateType) => void }
+const FilterChart = ({ dateType, onChange }: FilterChartProps) => (
   <div className='flex gap-4 pl-2'>
     {filterTypes.map(f => (
       <Badge

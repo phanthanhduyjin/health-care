@@ -1,10 +1,10 @@
 import clsx from 'clsx'
-import type { FC, ReactNode } from 'react'
+import type { ReactNode } from 'react'
 
 import type { IconName } from '@/components/icon/Icon'
 import { Icon } from '@/components/icon/Icon'
 import type { MealType } from '@/types'
-interface HexagonProps {
+type HexagonProps = {
   width?: number
   height?: number
   children?: ReactNode
@@ -12,13 +12,13 @@ interface HexagonProps {
   onClick?: () => void
 }
 
-export const Hexagon: FC<HexagonProps> = ({
+export const Hexagon = ({
   width = 136,
   height = 136,
   children,
   className = '',
   onClick,
-}) => (
+}: HexagonProps) => (
   <div
     className={`hexagon px-2.5 py-[1px] ${className}`}
     style={{
@@ -54,7 +54,7 @@ type Props = {
   type?: MealType
   onChange: (t?: MealType) => void
 }
-export const MealSelector: FC<Props> = ({ type, onChange }) => (
+export const MealSelector = ({ type, onChange }: Props) => (
   <div className='app-container flex items-center gap-16 py-6'>
     {mealItems.map(i => (
       <Hexagon

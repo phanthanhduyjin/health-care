@@ -1,13 +1,11 @@
-import type { FC } from 'react'
-
-interface MealCardProps {
+type MealCardProps = {
   date: string
   mealType: string
   imageUrl: string
   onClick?: () => void
 }
 
-export const MealCard: FC<MealCardProps> = ({ date, mealType, imageUrl, onClick }) => (
+export const MealCard = ({ date, mealType, imageUrl, onClick }: MealCardProps) => (
   <article
     className='group relative h-[234px] cursor-pointer overflow-hidden'
     onClick={onClick}

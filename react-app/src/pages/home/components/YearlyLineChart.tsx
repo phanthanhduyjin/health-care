@@ -1,10 +1,9 @@
-import type { FC } from 'react'
 import { CartesianGrid, Line, LineChart, ResponsiveContainer, XAxis } from 'recharts'
 
 import { useGetYearlyReport } from '@/pages/home/hooks/useGetYearlyReport'
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-const CustomTick: FC = ({ x, y, payload }: any) => {
+const CustomTick = ({ x, y, payload }: any) => {
   const text = payload.value
   const number = text.match(/\d+/)[0]
   const unit = text.replace(/\d+/, '')
@@ -31,7 +30,7 @@ const CustomTick: FC = ({ x, y, payload }: any) => {
     </g>
   )
 }
-export const YearlyLineChart: FC = () => {
+export const YearlyLineChart = () => {
   const { data } = useGetYearlyReport()
   return (
     <div className='bg-dark-600 h-full w-full flex-1 pr-[98px] pl-[53px]'>

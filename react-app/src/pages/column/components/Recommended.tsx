@@ -1,5 +1,3 @@
-import type { FC } from 'react'
-
 const recommends = [
   {
     type: 'COLUMN',
@@ -19,7 +17,7 @@ const recommends = [
   },
 ]
 
-export const Recommended: FC = () => (
+export const Recommended = () => (
   <section className='app-container'>
     <div className='flex gap-8'>
       {recommends.map(r => (

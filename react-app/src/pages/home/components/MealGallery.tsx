@@ -1,5 +1,4 @@
 import dayjs from 'dayjs'
-import type { FC } from 'react'
 import { useRef, useState } from 'react'
 
 import { MealCard } from '@/pages/home/components/MealCard'
@@ -9,7 +8,7 @@ import { Button } from '@/shadcn/components/ui/button'
 import type { MealType } from '@/types'
 import { SkeletonList } from '@/components/layouts/SkeletonList'
 
-export const MealGallery: FC = () => {
+export const MealGallery = () => {
   const [typeSelected, setTypeSelected] = useState<MealType | undefined>()
   const { meals, fetchNextPage, hasNextPage, isFetching, isLoading } = useGetMeals(typeSelected)
 
