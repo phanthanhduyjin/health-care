@@ -7,7 +7,9 @@
     "dev:react": "pnpm --filter react-app dev",
     "dev": "pnpm --parallel --filter server --filter react-app dev"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "prettier": "^3.6.2"
+  },
   "engines": {
     "node": ">=18.0.0",
     "pnpm": ">=8.0.0"
