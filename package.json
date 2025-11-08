@@ -1,0 +1,15 @@
+{
+  "name": "health-care",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev:server": "pnpm --filter server dev",
+    "dev:react": "pnpm --filter react-app dev",
+    "dev": "pnpm --parallel --filter server --filter react-app dev"
+  },
+  "devDependencies": {},
+  "engines": {
+    "node": ">=18.0.0",
+    "pnpm": ">=8.0.0"
+  }
+}

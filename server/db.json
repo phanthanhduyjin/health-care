@@ -1,0 +1,74 @@
+{
+  "patients": [
+    {
+      "id": 1,
+      "name": "John Doe",
+      "age": 45,
+      "gender": "Male",
+      "diagnosis": "Hypertension",
+      "lastVisit": "2025-11-01"
+    },
+    {
+      "id": 2,
+      "name": "Jane Smith",
+      "age": 32,
+      "gender": "Female",
+      "diagnosis": "Diabetes Type 2",
+      "lastVisit": "2025-11-05"
+    },
+    {
+      "id": 3,
+      "name": "Robert Johnson",
+      "age": 58,
+      "gender": "Male",
+      "diagnosis": "Arthritis",
+      "lastVisit": "2025-10-28"
+    }
+  ],
+  "appointments": [
+    {
+      "id": 1,
+      "patientId": 1,
+      "doctorName": "Dr. Sarah Williams",
+      "date": "2025-11-15",
+      "time": "10:00 AM",
+      "status": "scheduled"
+    },
+    {
+      "id": 2,
+      "patientId": 2,
+      "doctorName": "Dr. Michael Brown",
+      "date": "2025-11-12",
+      "time": "2:30 PM",
+      "status": "scheduled"
+    },
+    {
+      "id": 3,
+      "patientId": 3,
+      "doctorName": "Dr. Emily Davis",
+      "date": "2025-11-10",
+      "time": "11:00 AM",
+      "status": "completed"
+    }
+  ],
+  "doctors": [
+    {
+      "id": 1,
+      "name": "Dr. Sarah Williams",
+      "specialty": "Cardiology",
+      "email": "s.williams@healthcare.com"
+    },
+    {
+      "id": 2,
+      "name": "Dr. Michael Brown",
+      "specialty": "Endocrinology",
+      "email": "m.brown@healthcare.com"
+    },
+    {
+      "id": 3,
+      "name": "Dr. Emily Davis",
+      "specialty": "Rheumatology",
+      "email": "e.davis@healthcare.com"
+    }
+  ]
+}
