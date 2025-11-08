@@ -1,4 +1,4 @@
-import type { CSSProperties } from "react"
+import type { CSSProperties } from 'react'
 
 import ChallengeIcon from '@/assets/icons/icon_challenge.svg?react'
 import CloseIcon from '@/assets/icons/icon_close.svg?react'

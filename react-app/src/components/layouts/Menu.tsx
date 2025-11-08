@@ -7,7 +7,7 @@ import { ROUTER_CONFIG } from '@/router/config'
 import { Popover, PopoverContent, PopoverTrigger } from '@/shadcn/components/ui/popover'
 
 const menuItems = [
-  { id: 1, label: '自分の記録', href: ROUTER_CONFIG.RECORD },
+  { id: 1, label: '自分の記録', href: ROUTER_CONFIG.MY_RECORD },
   { id: 2, label: '体重グラフ', href: '/' },
   { id: 3, label: '目標', href: '/' },
   { id: 4, label: '選択中のコース', href: '/' },
@@ -22,7 +22,7 @@ export const Menu = () => {
       onOpenChange={setOpen}
     >
       <PopoverTrigger asChild>
-        <button className='pl-4 cursor-pointer '>
+        <button className='cursor-pointer pl-4'>
           <Icon
             size={32}
             name='menu'
@@ -38,7 +38,7 @@ export const Menu = () => {
       >
         <div className='relative'>
           <button
-            className='hover:bg-dark-500/90 cursor-pointer bg-dark-500 absolute -top-8 -right-[0.5px] flex h-8 w-8 items-center justify-center rounded-none shadow-none hover:bg-none'
+            className='hover:bg-dark-500/90 bg-dark-500 absolute -top-8 -right-[0.5px] flex h-8 w-8 cursor-pointer items-center justify-center rounded-none shadow-none hover:bg-none'
             onClick={() => setOpen(false)}
           >
             <Icon

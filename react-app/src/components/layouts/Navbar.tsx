@@ -13,7 +13,7 @@ type NavItem = {
 }
 
 const navigationItems: NavItem[] = [
-  { id: 'records', label: '自分の記録', icon: 'memo', pathName: ROUTER_CONFIG.RECORD },
+  { id: 'records', label: '自分の記録', icon: 'memo', pathName: ROUTER_CONFIG.MY_RECORD },
   { id: 'challenge', label: 'チャレンジ', icon: 'challenge', pathName: '' },
 ]
 
